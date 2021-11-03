@@ -1,0 +1,33 @@
+<div class="mini-Container">
+    {{#if mssg}}
+        <div class="alert alert-success" role="alert">
+      {{mssg}}
+    </div>
+    {{/if}}
+    {{#if error}}
+    <div class="alert alert-danger" role="alert">
+      {{error}}
+    </div>
+    {{/if}}
+    <h1 class="display-6  py-1">Login</h1>
+ <form method="POST"action='/user/login'>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">username</label>
+        <input type="text" class="form-control" name='username' id="exampleInputEmail1" aria-describedby="emailHelp">        
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1"  class="form-label">Password</label>
+        <input type="password" class="form-control" name='password' id="exampleInputPassword1">
+    </div>
+    
+     <button type="submit" class="btn btn-primary large">Login</button>
+    
+
+    </form>
+      <a href="/register" class="btn btn-secondary large mt-3">Register a User</a>
+</div>
+<script>
+    setTimeout(()=>{
+        document.getElementsByClassName('alert')[0].remove()
+    },3300)
+</script>

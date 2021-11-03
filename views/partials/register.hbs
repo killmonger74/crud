@@ -1,0 +1,36 @@
+<div class="mini-Container mt-5">
+    {{#if error}}
+    <div class="alert alert-danger" role="alert">
+      {{error}}
+    </div>
+    {{/if}}
+    <h1 class="display-6  py-1">Register</h1>
+    <form action="/user/register" method="post">
+        <div class="mb-1">
+            <label for="exampleInputEmail1"  class="form-label">User</label>
+            <input type="email" class="form-control form-control" name='user' id="exampleInputEmail1" aria-describedby="emailHelp" value={{ress.user}}>        
+        </div>
+        <div class="mb-1">
+            <label for="exampleInputEmail1112"  class="form-label">Choose a Username</label>
+            <input type="text" class="form-control form-control" name='username' id="exampleInputEmail1112" value={{ress.username}}>        
+        </div>
+        <div class="mb-1">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control form-control"  name='password'  id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1"  class="form-label">Confirm Password</label>
+            <input type="password" class="form-control form-control" name='confirm' id="exampleInputPassword1">
+        </div>
+        <button type="submit" class="btn btn-primary large">Register</button>
+        
+
+    </form>
+
+      <a href="/" class="btn btn-secondary large mt-3">Login </a>
+</div>
+<script>
+    setTimeout(()=>{
+        document.getElementsByClassName('alert')[0].remove()
+    },3300)
+</script>
